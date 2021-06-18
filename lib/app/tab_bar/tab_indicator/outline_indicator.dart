@@ -4,7 +4,7 @@ class OutlineIndicator extends Decoration {
   const OutlineIndicator({
     this.color = Colors.white,
     this.strokeWidth = 2,
-    this.radius = Radius.zero,
+    this.radius = const Radius.circular(24),
   });
 
   final Color color;
