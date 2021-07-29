@@ -38,8 +38,9 @@ class _DotPainter extends BoxPainter {
     assert(configuration.size != null);
     final Rect rect = offset & configuration.size!;
     canvas.drawCircle(
-        Offset(rect.bottomCenter.dx, rect.bottomCenter.dy - radius),
-        radius,
-        _paint);
+      Offset(rect.bottomCenter.dx, rect.bottomCenter.dy - radius),
+      radius,
+      _paint,
+    );
   }
 }
