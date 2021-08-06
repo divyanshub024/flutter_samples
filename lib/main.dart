@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_samples/app/tab_bar/main_tab_bar.dart';
+import 'package:flutter_samples/config/app_router.dart';
 import 'package:flutter_samples/values/app_theme.dart';
 
 void main() {
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Samples',
+      navigatorKey: AppRouter.navigatorKey,
       theme: AppTheme.themeData,
       home: MyHomePage(title: 'Flutter Samples'),
     );
@@ -43,10 +45,7 @@ class MyHomePage extends StatelessWidget {
     _screens.forEach((key, value) {
       var tile = ListTile(
         title: Text(key),
-        onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => value),
-        ),
+        onTap: () => AppRouter.push(value),
       );
       tiles.add(tile);
     });
