@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_samples/app/infinity_path_animation/infinity_path_Animation.dart';
 import 'package:flutter_samples/app/tab_bar/main_tab_bar.dart';
 import 'package:flutter_samples/config/app_router.dart';
 import 'package:flutter_samples/values/app_theme.dart';
@@ -26,6 +27,7 @@ class MyHomePage extends StatelessWidget {
 
   final Map<String, Widget> _screens = {
     'Custom TabBar Indicator': MainTabBar(),
+    'Infinity Path Animation': InfinityPathAnimation(),
   };
 
   @override
