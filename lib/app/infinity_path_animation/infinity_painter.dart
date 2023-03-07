@@ -26,7 +26,6 @@ class InfinityPainter extends CustomPainter {
     height = size.height;
 
     for (int i = 0; i < infinitiesLength; i++) {
-      // debugPrint(Colors.accents[i].toString());
       _drawInfinitySymbols(
         canvas,
         color: colors[i % 3],
