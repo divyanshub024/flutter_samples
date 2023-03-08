@@ -31,23 +31,19 @@ class _InfinityPathAnimationState extends State<InfinityPathAnimation>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFECDAC3),
-      body: Column(
-        children: [
-          Center(
-            child: AnimatedBuilder(
-              animation: _controller,
-              builder: (context, _) {
-                return CustomPaint(
-                  size: const Size(500, 500),
-                  painter: InfinityPainter(
-                    progress: _controller.value,
-                    infinitiesLength: infinitiesLength,
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
+      body: Center(
+        child: AnimatedBuilder(
+          animation: _controller,
+          builder: (context, _) {
+            return CustomPaint(
+              size: const Size(500, 500),
+              painter: InfinityPainter(
+                progress: _controller.value,
+                infinitiesLength: infinitiesLength,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
