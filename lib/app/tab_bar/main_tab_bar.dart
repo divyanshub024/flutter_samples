@@ -6,7 +6,7 @@ class MainTabBar extends StatefulWidget {
   const MainTabBar({Key? key}) : super(key: key);
 
   @override
-  _MainTabBarState createState() => _MainTabBarState();
+  State<MainTabBar> createState() => _MainTabBarState();
 }
 
 class _MainTabBarState extends State<MainTabBar>
@@ -15,8 +15,8 @@ class _MainTabBarState extends State<MainTabBar>
   late Decoration _currentIndicator;
 
   final Map<String, Decoration> _indicators = {
-    'Dot Indicator': DotIndicator(),
-    'Outline Indicator': OutlineIndicator(),
+    'Dot Indicator': const DotIndicator(),
+    'Outline Indicator': const OutlineIndicator(),
   };
 
   @override
@@ -41,17 +41,17 @@ class _MainTabBarState extends State<MainTabBar>
   }
 
   AppBar get _appBar => AppBar(
-        title: Text('Tabs Demo'),
+        title: const Text('Tabs Demo'),
         actions: [
           IconButton(
-            icon: Icon(Icons.filter_list_rounded),
+            icon: const Icon(Icons.filter_list_rounded),
             onPressed: () => _showBottomSheet(),
           ),
         ],
         bottom: TabBar(
           controller: _tabController,
           indicator: _currentIndicator,
-          tabs: [
+          tabs: const [
             Tab(icon: Icon(Icons.home)),
             Tab(icon: Icon(Icons.dashboard)),
             Tab(icon: Icon(Icons.settings)),
@@ -61,7 +61,7 @@ class _MainTabBarState extends State<MainTabBar>
 
   Widget get _body => TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           Icon(Icons.home, size: 100),
           Icon(Icons.dashboard, size: 100),
           Icon(Icons.settings, size: 100),

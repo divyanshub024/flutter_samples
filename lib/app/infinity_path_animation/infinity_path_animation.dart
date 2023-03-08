@@ -30,8 +30,7 @@ class _InfinityPathAnimationState extends State<InfinityPathAnimation>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFECDAC3),
-      // backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFECDAC3),
       body: Column(
         children: [
           Center(
