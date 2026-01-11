@@ -1,4 +1,4 @@
-# Divy Flutter Samples
+# Flutter Samples
 
 This repository contains a collection of samples showcasing some of the experiments with Flutter.
 
